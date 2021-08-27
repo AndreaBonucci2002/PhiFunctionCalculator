@@ -1,13 +1,13 @@
 Number = input('Phi(x) calculator, let x be:')
 
 
-def factors(nr):
+def factors(num):
     i = 2
     factors = []
-    while i <= nr:
-        if (nr % i) == 0:
+    while i <= num:
+        if (num % i) == 0:
             factors.append(i)
-            nr = nr / i
+            num = num / i
         else:
             i = i + 1
     return factors
@@ -31,10 +31,10 @@ def phi(lst):
     return x
 
 
-def multiplyList(myList):
-    result = 1
-    for x in myList:
-        result = result * x
-    return result
+def multiplyList(lst):
+    res = 1
+    for x in lst:
+        res = res * x
+    return res
 
 print(multiplyList(phi(primefac(factors(int(Number))))))
